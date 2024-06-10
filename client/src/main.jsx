@@ -6,6 +6,8 @@ import './index.css';
 import Root from './routes/Root.jsx';
 import Home from './routes/Home.jsx';
 import Contractors from './routes/Contractors.jsx';
+import SignupPage from './routes/SignupPage';
+import AuthPage from './routes/AuthPage';
 
 const router = createBrowserRouter([
   {
@@ -13,13 +15,20 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
+        path:'/home',
+        element: <Home/>,
+      },
+      { path: '/auth',
+        element: <AuthPage /> },
+      {
         path: '/',
-        element: <Home />,
+        element: <SignupPage />,
       },
       {
         path: '/contractors',
         element: <Contractors />,
       },
+      
     ],
   },
 ]);
