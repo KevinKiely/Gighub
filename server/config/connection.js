@@ -1,6 +1,9 @@
 const { connect, connection } = require('mongoose');
 
-const connectionString = 'mongodb://127.0.0.1:27017/gighubDB';
+const connectionString = ('mongodb://127.0.0.1:27017/gighubDB', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 connect(connectionString).then(console.log('Connected to Database'));
 
